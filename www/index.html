@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <title> JQuery Sample</title>
+		<meta name ="viewport" content ="width = device-width, initial-scale=1">
+		<link rel ="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <title>Resaurant Picker</title>
+    </head>
+    <body>
+		<div data-role ="page" id="main">
+			<img src="img/restocanda.png" style="width: 100%;height:auto;"/>	
+			<p>
+				What do you want to eat?
+			</p>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#secondPage"><img src="ray.png"> tuna fish</a></li>
+				<li><a href="#secondPage"><img src="scott.png"> Fried Rice</a></li>
+				<li><a href="#secondPage"><img src="todd.png"> Fried Noodles</a></li>
+				<li><a href="#secondPage"><img src="dave.png"> Oseng2</a></li>
+			</ul>
+		</div>
+		
+		<div data-role ="page" id="secondPage">
+			<div data-role="header">
+				<a href="#main" data-icon="back">Back</a>
+				<span class="ui-title"> RestoCanda</span>
+			</div>
+			<p>
+				Choose a town where you want to eat
+			</p>
+			<ul data-role="listview" data-inset="true" data-filter="true">
+				<li><a href="#thirdPage" class="ui-li-icon"> Salatiga<span class="ui-li-count">2</span></a></li>
+				<li><a href="#thirdPage" class="ui-li-icon"> Semarang<span class="ui-li-count">3</span></a></li>
+				<li><a href="#thirdPage" class="ui-li-icon"> Boyolali<span class="ui-li-count">1</span></a></li>
+				<li><a href="#thirdPage" class="ui-li-icon"> Jepara<span class="ui-li-count">2</span></a></li>
+				<li><a href="#thirdPage" class="ui-li-icon"> Kudus<span class="ui-li-count">2</span></a></li>
+				<li><a href="#thirdPage" class="ui-li-icon"> Ambarawa<span class="ui-li-count">1</span></a></li>
+				<li><a href="#thirdPage" class="ui-li-icon"> Klaten<span class="ui-li-count">1</span></a></li>
+				<li><a href="#thirdPage" class="ui-li-icon"> Magelang<span class="ui-li-count">2</span></a></li>
+				<li><a href="#thirdPage" class="ui-li-icon"> Solo<span class="ui-li-count">3</span></a></li>
+			
+			
+			</ul>
+		</div>
+		
+		<div data-role ="page" id="thirdPage">
+			<div data-role="header">
+				<a href="#secondPage" data-icon="back">Back</a>
+				<span class="ui-title"> RestoCanda</span>
+			</div>
+			<p>
+				Choose a Resaurant
+			</p>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#FourthPage"><img src="ray.png"><h4> ABC Bakso</h4> 
+					<img src="img/icons-png/star-black.png">
+					<img src="img/icons-png/star-black.png">
+				</a></li>
+				<li><a href="#FourthPage"><img src="ray.png"><h4> Mie Ayam Andalan</h4> 
+					<img src="img/icons-png/star-black.png">
+				</a></li>
+				<li><a href="#FourthPage"><img src="ray.png"><h4> Resto Candi</h4> 
+					<img src="img/icons-png/star-black.png">
+					<img src="img/icons-png/star-black.png">
+				</a></li>
+				<li><a href="#FourthPage"><img src="ray.png"><h4> Hanna Resto</h4> 
+					<img src="img/icons-png/star-black.png">
+					<img src="img/icons-png/star-black.png">
+					<img src="img/icons-png/star-black.png">
+				</a></li>
+				<li><a href="#secondPage"><img src="ray.png"><h4> Soto Pinggir</h4> 
+					<img src="img/icons-png/star-black.png">
+				</a></li>
+			
+			</ul>
+		</div>
+		
+		<div data-role ="page" id="FourthPage">
+			<div data-role="header">
+				<a href="#thirdPage" data-icon="back">Back</a>
+				<span class="ui-title"> RestoCanda</span>
+			</div>
+			<div data-role="fieldcontain">
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+					<h4>
+						Resaurant's Name
+					</h4>
+					<p>
+						Description:<br>
+						-wefw<br>
+						-awef<br>
+						-azimuth<br>
+						-avoid
+					</p>
+					</div>
+					<div class="ui-block-b">
+						<h4>
+							<img src="img/imageNull.png">
+						</h4>
+						
+						<form action="echo.cfm" method="post">
+							<input type="submit" name="submit" value="See our website" />
+						</form>
+					</div>
+						
+				</div>
+			</div>
+			<div data-role="fieldcontain">
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+					<h4>
+						Contact us
+					</h4>
+					<p>
+						Contact details
+					</p>
+					</div>
+					<div class="ui-block-b">
+						<h4>
+							<img src="http://maps.googleapis.com/maps/api/">
+						</h4>
+					</div>
+						
+				</div>
+				<form action="echo.cfm" method="post">
+					<input type="submit" name="submit" value="Find us in Google Maps" />
+					<input type="submit" name="submit" value="Call Us" />
+				</form>
+			</div>
+			
+			<div data-role="fieldcontain">
+				<p>
+					User's Rating
+				</p>						
+				<form action="echo.cfm" method="post">
+					<input type="submit" name="submit" value="Good" />
+				
+				</form>
+			</div>
+			
+		</div>
+	
+		
+    </body>
+</html>
